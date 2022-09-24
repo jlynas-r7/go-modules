@@ -1,13 +1,19 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 
 	"github.com/gorilla/mux"
+	"rsc.io/quote"
+	quotev2 "rsc.io/quote/v2"
 )
 
 func main() {
+
+	fmt.Println(quote.Hello())
+	fmt.Println(quotev2.HelloV2())
 
 	rtr := mux.NewRouter()
 
